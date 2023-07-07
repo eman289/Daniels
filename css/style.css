@@ -1,0 +1,659 @@
+/*******===== Start Global =====*******/
+:root {
+  --mainColor: #343434;
+  --d-transition: 300ms;
+  --main-font: "Poppins", sans-serif;
+  --sec-font: "Montserrat", sans-serif;
+  --bg-section: #f7f7f7;
+}
+
+html {
+  scroll-padding-top: 61px;
+}
+
+body {
+  font-family: var(--main-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--sec-font);
+}
+
+p {
+  color: #748182;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.main-color {
+  color: var(--mainColor);
+}
+
+.section-bg {
+  background-color: var(--bg-section);
+}
+
+.section-padding {
+  padding-top: 100px;
+  padding-bottom: 70px;
+}
+
+.description {
+  max-width: 780px;
+}
+
+.btn-main {
+  font-size: 13px;
+  padding: 10px 30px;
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #1c1c1c;
+  --bs-btn-border-color: #1c1c1c;
+  --bs-btn-hover-color: #1c1c1c;
+  --bs-btn-hover-bg: #fff;
+  --bs-btn-hover-border-color: #1c1c1c;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #1c1c1c;
+  --bs-btn-active-border-color: #fff;
+}
+
+.btn-icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 13px;
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #1c1c1c;
+  --bs-btn-border-color: #1c1c1c;
+  --bs-btn-hover-color: #1c1c1c;
+  --bs-btn-hover-bg: #fff;
+  --bs-btn-hover-border-color: #1c1c1c;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #1c1c1c;
+  --bs-btn-active-border-color: #fff;
+}
+
+.btn-sec {
+  font-size: 13px;
+  padding: 10px 30px;
+  --bs-btn-color: #1c1c1c;
+  --bs-btn-bg: #fff;
+  --bs-btn-border-color: #1c1c1c;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #1c1c1c;
+  --bs-btn-hover-border-color: #1c1c1c;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #1c1c1c;
+  --bs-btn-active-border-color: #fff;
+}
+
+.fit-content {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+/* Section Title */
+.main-title {
+  margin-bottom: 80px;
+}
+
+.main-title h3 {
+  position: relative;
+  margin: 0;
+  z-index: 1;
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.main-title h3::after {
+  content: "";
+  width: 100%;
+  height: 30px;
+  background-image: url("../images/dots.png");
+  background-repeat: repeat;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  z-index: -1;
+}
+
+/*******===== Start Navbar =====*******/
+
+.navbar {
+  background: #fff !important;
+  box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.05);
+}
+
+.navbar .logo {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-family: var(--sec-font);
+}
+
+.navbar-toggler {
+  border: none;
+  color: var(--mainColor);
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar .nav-item {
+  padding-inline: 15px;
+  padding-block: 12px;
+}
+
+.navbar .nav-item .nav-link {
+  color: var(--mainColor) !important;
+  padding: 0;
+  font-size: 14px;
+  position: relative;
+}
+
+.navbar .nav-item .nav-link::before {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #222;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  transition: width var(--d-transition);
+}
+
+.navbar .nav-item .nav-link.active::before {
+  width: 95%;
+}
+
+/*******===== Start Home =====*******/
+header {
+  background-image: linear-gradient(#000a, #000a), url("../images/bg.jpg");
+  background-size: cover;
+  padding-top: 61px;
+}
+
+header .caption h5 {
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+header .social {
+  margin-top: 30px;
+}
+
+header .social li a {
+  color: #fff;
+  font-size: 14px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0000004d;
+}
+
+header .type {
+  font-size: 60px;
+  font-weight: 200;
+  padding: 12px 0px;
+}
+
+header .type::after {
+  content: " ";
+  border-right: 2px solid #ffffff9c;
+  padding-right: 5px;
+  font-weight: 400;
+  animation: typing 8s linear infinite;
+}
+
+/* 100-(11*3)=67 / 3 = 22.33333 / 2 = 11.16666
+
+Larry Daniels = 12
+11.16666/12 = 0.93
+
+Developer = 9
+11.16666/9= 1.24
+
+Designer = 8
+11.16666/8= 1.39
+*/
+
+@keyframes typing {
+  0% {content:""}
+  0.93% {content:"L"}
+  1.86% {content:"La"}
+  2.79% {content:"Lar"}
+  3.72% {content:"Larr"}
+  4.65% {content:"Larry"}
+  5.58% {content:"Larry D"}
+  6.51% {content:"Larry Da"}
+  7.44% {content:"Larry Dan"}
+  8.37% {content:"Larry Dani"}
+  9.3% {content:"Larry Danie"}
+  10.23% {content:"Larry Daniel"}
+  11.16% {content:"Larry Daniels"}
+  22.16% {content:"Larry Daniels"}
+  23.09% {content:"Larry Daniel"}
+  24.02% {content:"Larry Danie"}
+  24.95% {content:"Larry Dani"}
+  25.88% {content:"Larry Dan"}
+  26.81% {content:"Larry Da"}
+  27.74% {content:"Larry D"}
+  28.67% {content:"Larr"}
+  29.6% {content:"Lar"}
+  30.53% {content:"La"}
+  31.46% {content:"L"}
+  33.94% {content:""}
+  35.18% {content:"D"}
+  36.42% {content:"De"}
+  37.66% {content:"Dev"}
+  38.9% {content:"Deve"}
+  40.14% {content:"Devel"}
+  41.38% {content:"Develo"}
+  42.62% {content:"Develop"}
+  43.86% {content:"Develope"}
+  45.1% {content:"Developer"}
+  56.1% {content:"Developer"}
+  57.34% {content:"Develope"}
+  58.58% {content:"Develop"}
+  59.82% {content:"Develo"}
+  61.06% {content:"Devel"}
+  62.3% {content:"Deve"}
+  63.54% {content:"Dev"}
+  64.78% {content:"De"}
+  66.02% {content:"D"}
+  67.26% {content:""}
+  68.65% {content:"D"}
+  70.04% {content:"De"}
+  71.43% {content:"Des"}
+  72.82% {content:"Desi"}
+  74.21% {content:"Desig"}
+  75.6% {content:"Design"}
+  76.99% {content:"Designe"}
+  78.38% {content:"Designer"}
+  89.38% {content:"Designer"}
+  90.77% {content:"Designe"}
+  92.16% {content:"Design"}
+  93.55% {content:"Desig"}
+  94.94% {content:"Desi"}
+  96.33% {content:"Des"}
+  97.72% {content:"De"}
+  99.11% {content:"D"}
+  100% {content:""}
+}
+
+@media screen and (max-width: 1200px) {
+  header .type {
+    font-size: 44px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header .type {
+    font-size: 30px;
+  }
+}
+
+/*******===== Start About =====*******/
+.about .img-box {
+  padding-left: 30px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.about .img-box::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 80%;
+  height: 80%;
+  background-image: url("../images/dots.png");
+  background-repeat: repeat;
+  left: 0px;
+  bottom: -30px;
+}
+
+.about .about-content h3 {
+  font-weight: 800;
+  font-size: 30px;
+}
+.about .s-title {
+  color: #999999;
+  margin-bottom: 20px;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.about .progress {
+  background-color: #f7f7f7;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+  border-radius: 5px;
+}
+
+.about .skill-progress .progress-bar {
+  position: relative;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #1c1c1c;
+}
+
+.about .skill-progress .progress-bar::before {
+  content: attr(data-heading);
+  position: absolute;
+  z-index: 10;
+  font-size: 13px;
+}
+
+.progress,
+.progress-stacked {
+  --bs-progress-height: 25px;
+}
+
+/*******===== Start Services =====*******/
+
+.services .box {
+  box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 50px 20px;
+  margin-bottom: 30px;
+}
+
+.services .box span {
+  font-size: 25px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  transition: color var(--d-transition) ease-in-out,
+    background-color var(--d-transition) ease-in-out;
+}
+
+.services .box:hover span {
+  color: #fff;
+  background-color: var(--mainColor);
+}
+
+.services .box h6 {
+  font-size: 1.125rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+/*******===== Start portfolio =====*******/
+
+.portfolio .nav-item {
+  padding-inline: var(--bs-nav-link-padding-y);
+}
+
+.portfolio .nav-item .nav-link {
+  all: unset;
+  color: #222;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+}
+
+.portfolio .nav-item .nav-link::before {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #111;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: width var(--d-transition);
+}
+
+.portfolio .nav-item .nav-link.active::before {
+  width: 95%;
+}
+
+.portfolio .item {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio .layer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.95);
+  transition: all 500ms;
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.portfolio .layer h6 {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  transform: translateY(-15px);
+  transition: all 500ms;
+}
+
+.portfolio .item:hover .layer {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.portfolio .item:hover .layer h6 {
+  transform: translateY(0px);
+}
+
+/*******===== Start Clients =====*******/
+
+.clients {
+  padding-block: 100px;
+}
+
+.clients .client-img {
+  width: 90px;
+  height: 90px;
+}
+
+.clients .client-info h6 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.clients .client-info span {
+  display: block;
+  color: #888;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #869791;
+  margin: 5px 7px;
+}
+
+/*******===== Start Counters =====*******/
+
+.counters i {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.counters h3 {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.counters p {
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/*******===== Start Team =====*******/
+.team {
+  padding-block: 100px;
+}
+
+.team .card {
+  background-color: rgba(52, 52, 52, 0.8);
+  color: #fff;
+  margin-bottom: 10px;
+  border: transparent;
+  --bs-border-radius: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.team .btn-icon {
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+}
+
+.team .member-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.team .member-img img {
+  transition: transform 500ms ease-in-out;
+}
+
+.team .member-img:hover img {
+  transform: scale(1.2);
+}
+
+.team .layer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.95);
+  transition: 500ms;
+  transform: rotateY(180deg) scale(0.5, 0.5);
+  opacity: 0;
+}
+
+.team .card:hover .layer {
+  opacity: 1;
+  transform: rotateY(0deg) scale(1, 1);
+  cursor: pointer;
+}
+
+.team .card-body {
+  padding: 25px;
+}
+
+.team .card-body h4 {
+  margin-bottom: 5px;
+  font-size: 25px;
+}
+
+/*******===== Start Contact =====*******/
+
+.contact {
+  padding-block: 100px;
+}
+
+.contact .box span {
+  font-size: 22px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  transition: color var(--d-transition) ease-in-out,
+    background-color var(--d-transition) ease-in-out;
+}
+
+.contact .box:hover span {
+  color: #fff;
+  background-color: var(--mainColor);
+}
+
+.contact .box h6 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.area {
+  max-width: 200px;
+}
+
+.contact .form-control {
+  display: block;
+  width: 100%;
+  padding: 0.625rem;
+  font-size: 14px;
+  font-weight: 400;
+  --bs-body-color: #748182;
+  --bs-body-bg: #f4f4f4;
+  border: 0;
+}
+
+.contact .form-control:focus {
+  outline: 0;
+  box-shadow: unset;
+}
+
+.contact textarea {
+  max-height: 200px;
+  min-height: 100px;
+  margin-bottom: 15px;
+}
+
+.contact .btn-main {
+  padding: 10px 40px;
+}
+
+/*******===== Start Footer =====*******/
+
+footer {
+  padding: 30px;
+  background-color: #1c1c1c;
+}
+
+footer p {
+  font-size: 13px;
+  word-spacing: 2px;
+}
